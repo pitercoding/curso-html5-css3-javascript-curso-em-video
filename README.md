@@ -1,4 +1,4 @@
-# 🌐 Curso em HTML, CSS e JavaScript
+# 🌐 Curso em HTML5, CSS3 e JavaScript
 
 Este repositório reúne exercícios, práticas e pequenos projetos desenvolvidos como parte da minha jornada de aprendizado em **HTML**, **CSS** e **JavaScript** através do canal do youtube **Curso Em Vídeo** ministrado pelo professor **Gustavo Guanabra**. Sou estudante de **Ciência da Computação**, e aqui registro meu progresso ao longo dos estudos com desenvolvimento web.
 
@@ -34,18 +34,6 @@ O repositório está organizado por temas ou módulos:
 - Prettier (formatação de código).
 - HTML/CSS/JS Snippets (atalhos úteis).
 
-## 🚀 Como usar este repositório
-1. Clone o repositório:
-
-```bash
-git clone https://github.com/seu-usuario/estudos-web.git
-cd estudos-web
-```
-2. Abra o projeto no VS Code:
-```bash
-code .
-```
-3. Use a extensão **Live Server** (ou abra os arquivos `.html` no navegador) para visualizar os exercícios em tempo real.
 
 ## 📌 Observações
 - Todos os arquivos são simples e autoexplicativos, com comentários no código quando necessário.
