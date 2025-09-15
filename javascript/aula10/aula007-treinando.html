@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <style>
+        body {
+            font: normal 18px Arial;
+        }
+
+        input {
+            width: 100px;
+        }
+
+        div {
+            font-size: medium;
+        }
+
+        div#resoma, div#ressub {
+            margin-top: 20px;
+            margin-bottom: 50px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Calculadora</h1>
+
+    <input type="number" name="txtn1" id="txtn1"> +
+    <input type="number" name="txtn2" id="txtn2">
+    <input type="button" value="Somar" onclick="somar()">
+    <div id="resoma">Resultado: </div>
+
+    <input type="number" name="txtn3" id="txtn3"> -
+    <input type="number" name="txtn4" id="txtn4">
+    <input type="button" value="Subtrair" onclick="subtrair()">
+    <div id="ressub">Resultado: </div>
+
+    <script>
+        function somar() {
+            var tn1 = window.document.getElementById('txtn1')
+            var tn2 = window.document.querySelector('input#txtn2')
+            var res = window.document.querySelector('div#resoma')
+            var n1 = Number(tn1.value)
+            var n2 = Number(tn2.value)
+            var soma = n1 + n2
+            resoma.innerHTML = `A soma de ${n1} e ${n2} é igual a ${soma}.`
+        }
+
+        function subtrair() {
+            var tn3 = window.document.querySelector('input#txtn3')
+            var tn4 = window.document.querySelector('input#txtn4')
+            var res = window.document.querySelector('div#ressub')
+            var n3 = Number(tn3.value)
+            var n4 = Number(tn4.value)
+            var subtrair = n3 - n4
+            ressub.innerHTML = `A subtração entre ${n3} e ${n4} é igual a ${subtrair}.`
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabelas</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        table {
+            width: 500px;
+            border-collapse: collapse;
+            position: relative; /*Para fixar o cabeçalho ao descer a página*/
+        }
+
+        td, th {
+            border: 1px solid black;
+            padding: 10px;
+        }
+
+        caption {
+            font-size: 1.5em;
+            font-weight: bold;
+            padding: 10px;
+            background-color: lightgray;
+
+        }
+
+        thead, tfoot {
+            background-color: gray;
+            color: white;
+        }
+
+        thead > tr > th {
+            position: sticky;
+            top: -1px;
+            background-color: gray;
+        } /*Para fixar o cabeçalho ao descer a página*/
+
+        tbody > tr:nth-child(2n) {
+            background-color: lightgray;
+        } /*Marca a célula da tabela de cinza a cada 2 linhas. Se pprecisar dar impares pode usar: (2n-1) ou (odd). Se par: (2n) ou (even). */
+
+        td.num {
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+    <h1>Uso de tabelas grandes</h1>
+    <!--
+    Anatomia de tabelas Grandes
+
+    TABLE
+            caption
+        THEAD
+            TR, TD, TH
+        TBODY
+            TR, TD, TH
+        TFOOT
+            TR, TD, TH
+    -->
+
+    <table>
+        <caption>População das Unidades Federativas</caption>
+       <thead>
+            <tr>
+                <th scope="col" style="width: 200px;">Estado</th>
+                <th scope="col" style="width: 150px;">População (2024)</th>
+                <th scope="col" style="width: 300px;">País comparável (habitantes)</th>
+            </tr>
+       </thead> 
+       <tbody>
+            <tr>
+                <td>São Paulo</td>
+                <td class="num">45 973 194</td>
+                <td>Iraque (46 042 015)</td>
+            </tr>
+            <tr>
+                <td>Minas Gerais</td>
+                <td class="num">21 322 691</td>
+                <td>Zâmbia (21 314 956)</td>
+            </tr>
+            <tr>
+                <td>Rio de Janeiro</td>
+                <td class="num">17 219 679</td>
+                <td>Camboja (17 638 801)</td>
+            </tr>
+            <tr>
+                <td>Bahia</td>
+                <td class="num">14 850 513</td>
+                <td>Guiné (14 754 785)</td>
+            </tr>
+            <tr>
+                <td>Paraná</td>
+                <td class="num">11 824 665</td>
+                <td>Haiti (11 772 557)</td>
+            </tr>
+            <tr>
+                <td>Rio Grande do Sul</td>
+                <td class="num">11 229 915</td>
+                <td>República Dominicana (11 427 557)</td>
+            </tr>
+            <tr>
+                <td>Pernambuco</td>
+                <td class="num">9 539 029</td>
+                <td>Togo (9 515 236)</td>
+            </tr>
+            <tr>
+                <td>Ceará</td>
+                <td class="num">9 233 656</td>
+                <td>Áustria (9 120 813)</td>
+            </tr>
+            <tr>
+                <td>Pará</td>
+                <td class="num">8 664 306</td>
+                <td>Serra Leoa (8 642 022)</td>
+            </tr>
+            <tr>
+                <td>Santa Catarina</td>
+                <td class="num">8 058 441</td>
+                <td>Laos (7 769 819)</td>
+            </tr>
+            <tr>
+                <td>Goiás</td>
+                <td class="num">7 350 483</td>
+                <td>Líbia (7 381 023)</td>
+            </tr>
+            <tr>
+                <td>Maranhão</td>
+                <td class="num">7 010 960	</td>
+                <td>Paraguai (6 929 153)</td>
+            </tr>
+            <tr>
+                <td>Amazonas</td>
+                <td class="num">4 281 209</td>
+                <td>Panamá (4 515 577)</td>
+            </tr>
+            <tr>
+                <td>Paraíba</td>
+                <td class="num">4 145 040</td>
+                <td>Croácia (3 875 325)</td>
+            </tr>
+            <tr>
+                <td>Espírito Santo</td>
+                <td class="num">4 145 040</td>
+                <td>Croácia (3 875 325)</td>
+            </tr>
+            <tr>
+                <td>Mato Grosso</td>
+                <td class="num">3 836 399</td>
+                <td>Geórgia (3 807 670)</td>
+            </tr>
+            <tr>
+                <td>Rio Grande do Norte</td>
+                <td class="num">3 446 071</td>
+                <td>Mongólia (3 475 540)</td>
+            </tr>
+            <tr>
+                <td>Piauí</td>
+                <td class="num">3 375 646</td>
+                <td>Uruguai (3 386 588)</td>
+            </tr>
+            <tr>
+                <td>Alagoas</td>
+                <td class="num">3 220 104</td>
+                <td>Bósnia e Herzegovina (3 164 253)</td>
+            </tr>
+            <tr>
+                <td>Distrito Federal</td>
+                <td class="num">2 982 818</td>
+                <td>Armênia (2 973 840)</td>
+            </tr>
+            <tr>
+                <td>Mato Grosso do Sul</td>
+                <td class="num">2 901 895</td>
+                <td>Lituânia (2 859 110)</td>
+            </tr>
+            <tr>
+                <td>Sergipe</td>
+                <td class="num">2 291 077</td>
+                <td>Lesoto (2 337 423)</td>
+            </tr>
+            <tr>
+                <td>Rondônia</td>
+                <td class="num">1 746 227</td>
+                <td>Macedônia do Norte (1 823 009)</td>
+            </tr>
+            <tr>
+                <td>Tocantins</td>
+                <td class="num">1 577 342</td>
+                <td>Bahrein (1 607 049)</td>
+            </tr>
+            <tr>
+                <td>Acre</td>
+                <td class="num">880 631</td>
+                <td>Comores (866 628)</td>
+            </tr>
+            <tr>
+                <td>Amapá</td>
+                <td class="num">802 837</td>
+                <td>Butão (791 524)</td>
+            </tr>
+            <tr>
+                <td>Roraima</td>
+                <td class="num">716 79</td>
+                <td>Luxemburgo (673 036)</td>
+            </tr>
+
+       </tbody>
+       <tfoot>
+            <tr>
+                <th scope="row">Total de Habitantes</th>
+                <td class="num"><strong>212 583 750</strong></td>
+            </tr>
+       </tfoot>
+    </table>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi, quia hic! Amet enim odit hic sunt soluta dicta tenetur, optio illum. Possimus tenetur nisi provident vel in incidunt. Vitae, illo. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore quae est molestias iure commodi laudantium. Consectetur ullam obcaecati minima deleniti tempore. Odit voluptate ad facere a voluptatibus. Hic, cumque autem. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint amet saepe repellendus tenetur illo a minus dolor voluptas cum harum suscipit natus, dignissimos distinctio vero, est possimus libero necessitatibus laudantium? Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto qui suscipit hic iure alias aliquid doloribus, aut, labore neque dolorum fugit ducimus nemo exercitationem voluptatibus quae officiis autem nobis inventore.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi, quia hic! Amet enim odit hic sunt soluta dicta tenetur, optio illum. Possimus tenetur nisi provident vel in incidunt. Vitae, illo. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore quae est molestias iure commodi laudantium. Consectetur ullam obcaecati minima deleniti tempore. Odit voluptate ad facere a voluptatibus. Hic, cumque autem. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint amet saepe repellendus tenetur illo a minus dolor voluptas cum harum suscipit natus, dignissimos distinctio vero, est possimus libero necessitatibus laudantium? Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto qui suscipit hic iure alias aliquid doloribus, aut, labore neque dolorum fugit ducimus nemo exercitationem voluptatibus quae officiis autem nobis inventore.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi, quia hic! Amet enim odit hic sunt soluta dicta tenetur, optio illum. Possimus tenetur nisi provident vel in incidunt. Vitae, illo. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore quae est molestias iure commodi laudantium. Consectetur ullam obcaecati minima deleniti tempore. Odit voluptate ad facere a voluptatibus. Hic, cumque autem. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint amet saepe repellendus tenetur illo a minus dolor voluptas cum harum suscipit natus, dignissimos distinctio vero, est possimus libero necessitatibus laudantium? Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto qui suscipit hic iure alias aliquid doloribus, aut, labore neque dolorum fugit ducimus nemo exercitationem voluptatibus quae officiis autem nobis inventore.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi, quia hic! Amet enim odit hic sunt soluta dicta tenetur, optio illum. Possimus tenetur nisi provident vel in incidunt. Vitae, illo. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore quae est molestias iure commodi laudantium. Consectetur ullam obcaecati minima deleniti tempore. Odit voluptate ad facere a voluptatibus. Hic, cumque autem. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint amet saepe repellendus tenetur illo a minus dolor voluptas cum harum suscipit natus, dignissimos distinctio vero, est possimus libero necessitatibus laudantium? Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto qui suscipit hic iure alias aliquid doloribus, aut, labore neque dolorum fugit ducimus nemo exercitationem voluptatibus quae officiis autem nobis inventore.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi, quia hic! Amet enim odit hic sunt soluta dicta tenetur, optio illum. Possimus tenetur nisi provident vel in incidunt. Vitae, illo. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore quae est molestias iure commodi laudantium. Consectetur ullam obcaecati minima deleniti tempore. Odit voluptate ad facere a voluptatibus. Hic, cumque autem. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint amet saepe repellendus tenetur illo a minus dolor voluptas cum harum suscipit natus, dignissimos distinctio vero, est possimus libero necessitatibus laudantium? Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto qui suscipit hic iure alias aliquid doloribus, aut, labore neque dolorum fugit ducimus nemo exercitationem voluptatibus quae officiis autem nobis inventore.</p>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi, quia hic! Amet enim odit hic sunt soluta dicta tenetur, optio illum. Possimus tenetur nisi provident vel in incidunt. Vitae, illo. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore quae est molestias iure commodi laudantium. Consectetur ullam obcaecati minima deleniti tempore. Odit voluptate ad facere a voluptatibus. Hic, cumque autem. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint amet saepe repellendus tenetur illo a minus dolor voluptas cum harum suscipit natus, dignissimos distinctio vero, est possimus libero necessitatibus laudantium? Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto qui suscipit hic iure alias aliquid doloribus, aut, labore neque dolorum fugit ducimus nemo exercitationem voluptatibus quae officiis autem nobis inventore.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi, quia hic! Amet enim odit hic sunt soluta dicta tenetur, optio illum. Possimus tenetur nisi provident vel in incidunt. Vitae, illo. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore quae est molestias iure commodi laudantium. Consectetur ullam obcaecati minima deleniti tempore. Odit voluptate ad facere a voluptatibus. Hic, cumque autem. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint amet saepe repellendus tenetur illo a minus dolor voluptas cum harum suscipit natus, dignissimos distinctio vero, est possimus libero necessitatibus laudantium? Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto qui suscipit hic iure alias aliquid doloribus, aut, labore neque dolorum fugit ducimus nemo exercitationem voluptatibus quae officiis autem nobis inventore.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi, quia hic! Amet enim odit hic sunt soluta dicta tenetur, optio illum. Possimus tenetur nisi provident vel in incidunt. Vitae, illo. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore quae est molestias iure commodi laudantium. Consectetur ullam obcaecati minima deleniti tempore. Odit voluptate ad facere a voluptatibus. Hic, cumque autem. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint amet saepe repellendus tenetur illo a minus dolor voluptas cum harum suscipit natus, dignissimos distinctio vero, est possimus libero necessitatibus laudantium? Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto qui suscipit hic iure alias aliquid doloribus, aut, labore neque dolorum fugit ducimus nemo exercitationem voluptatibus quae officiis autem nobis inventore.</p>
+</body>
+</html>
